@@ -12,7 +12,7 @@ export const MasaSessionMiddleware = ({
   name: string;
   secret: string;
   ttl: number;
-  store: Store;
+  store?: Store;
   domain: string;
   environment: string;
 }): RequestHandler =>
