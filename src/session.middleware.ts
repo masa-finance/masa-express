@@ -7,7 +7,7 @@ export const MasaSessionMiddleware = ({
   ttl,
   store,
   domain = ".masa.finance",
-  environment = "production",
+  environment,
 }: {
   name: string;
   secret: string;
@@ -15,8 +15,8 @@ export const MasaSessionMiddleware = ({
   store: Store;
   domain: string;
   environment: string;
-}): RequestHandler => {
-  return session({
+}): RequestHandler =>
+  session({
     name,
     secret,
     saveUninitialized: false,
@@ -34,4 +34,3 @@ export const MasaSessionMiddleware = ({
       maxAge: ttl * 1000,
     },
   });
-};

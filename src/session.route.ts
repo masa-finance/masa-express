@@ -18,7 +18,6 @@ export const MasaSessionRouter = ({
 }) => {
   const router: Router = express.Router();
 
-  console.dir({ sessionMiddleware }, { depth: null });
   router.use(sessionMiddleware);
 
   router.get("/get-challenge", getChallenge as never);
