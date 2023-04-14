@@ -5,6 +5,9 @@
   "typings": "./dist/src/index.d.ts",
   "author": "Sebastian Gerske <13647606+H34D@users.noreply.github.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "ts-mocha test/**/*.test.ts",
     "test:watch": "ts-mocha --extension ts,js test/**/*.test.ts --watch",
