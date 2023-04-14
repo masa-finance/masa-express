@@ -1,0 +1,29 @@
+{
+  "name": "@masa-finance/masa-express",
+  "version": "1.0.0",
+  "main": "./dist/src/index.js",
+  "typings": "./dist/src/index.d.ts",
+  "author": "Sebastian Gerske <13647606+H34D@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ts-mocha test/**/*.test.ts",
+    "test:watch": "ts-mocha --extension ts,js test/**/*.test.ts --watch",
+    "start": "yarn build:watch",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "prettier": "prettier ./src ./test --write",
+    "lint": "eslint ./src ./test",
+    "doc": "typedoc"
+  },
+  "dependencies": {
+    "@masa-finance/masa-sdk": "^1.13.4",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/express-session": "^1.17.7",
+    "@types/uuid": "^9.0.1",
+    "typescript": "^5.0.4"
+  }
+}
