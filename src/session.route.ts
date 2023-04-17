@@ -1,10 +1,10 @@
 import express, { Request, RequestHandler, Response, Router } from "express";
 import {
-  checkSignature,
-  getChallenge,
-  hasSessionChallenge,
-  logout,
-  sessionCheck,
+  checkSignatureHandler,
+  getChallengeHandler,
+  hasSessionChallengeHandler,
+  logoutHandler,
+  sessionCheckHandler,
 } from "./session.controller";
 
 export const MasaSessionRouter = ({
@@ -20,15 +20,18 @@ export const MasaSessionRouter = ({
 
   router.use(sessionMiddleware);
 
-  router.get("/get-challenge", getChallenge as never);
+  router.get("/get-challenge", getChallengeHandler as never);
 
-  router.use(hasSessionChallenge as never);
+  router.use(hasSessionChallengeHandler as never);
 
-  router.post("/check-signature", checkSignature(sessionNamespace) as never);
+  router.post(
+    "/check-signature",
+    checkSignatureHandler(sessionNamespace) as never
+  );
 
-  router.use(sessionCheck as never);
+  router.use(sessionCheckHandler as never);
 
-  router.post("/logout", logout(sessionName) as never);
+  router.post("/logout", logoutHandler(sessionName) as never);
 
   router.get("/check", (request: Request, response: Response) => {
     response.send(request.session);

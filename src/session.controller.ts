@@ -1,8 +1,8 @@
 import { NextFunction, Response } from "express";
-import { checkSignature as CheckSignature } from "./session.service";
+import { checkSignature } from "./session.service";
 import { parseError } from "./helpers";
 
-export const getChallenge = async (
+export const getChallengeHandler = async (
   request: Express.RequestSession,
   response: Response,
   next: NextFunction
@@ -31,7 +31,7 @@ export const getChallenge = async (
   }
 };
 
-export const checkSignature =
+export const checkSignatureHandler =
   (sessionNamespace: string) =>
   async (
     request: Express.RequestSession,
@@ -41,7 +41,7 @@ export const checkSignature =
     const { session, body } = request;
 
     try {
-      const result = await CheckSignature(sessionNamespace)(
+      const result = await checkSignature(sessionNamespace)(
         session,
         body.signature,
         body.address
@@ -68,7 +68,7 @@ export const checkSignature =
     }
   };
 
-export const logout =
+export const logoutHandler =
   (sessionName: string) =>
   async (request: Express.RequestSession, response: Response) => {
     const { session } = request;
@@ -96,7 +96,7 @@ export const logout =
     }
   };
 
-export const sessionCheck = (
+export const sessionCheckHandler = (
   request: Express.RequestSession,
   response: Response,
   next: NextFunction
@@ -114,7 +114,7 @@ export const sessionCheck = (
   next();
 };
 
-export const hasSessionChallenge = (
+export const hasSessionChallengeHandler = (
   request: Express.RequestSession,
   response: Response,
   next: NextFunction

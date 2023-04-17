@@ -2,14 +2,14 @@ import session, { Store } from "express-session";
 import { RequestHandler } from "express";
 
 export const MasaSessionMiddleware = ({
-  name,
+  sessionName,
   secret,
   ttl,
   store,
   domain = ".masa.finance",
   environment,
 }: {
-  name: string;
+  sessionName: string;
   secret: string;
   ttl: number;
   store?: Store;
@@ -17,7 +17,7 @@ export const MasaSessionMiddleware = ({
   environment: string;
 }): RequestHandler =>
   session({
-    name,
+    name: sessionName,
     secret,
     saveUninitialized: false,
     resave: false,
