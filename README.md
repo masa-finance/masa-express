@@ -1,6 +1,3 @@
-# Masa Express
- / [Exports](modules.md)
-
 <!-- TOC -->
   * [Installation](#installation)
   * [Usage](#usage)
