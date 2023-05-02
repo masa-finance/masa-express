@@ -16,7 +16,7 @@ export const MasaSessionMiddleware = ({
   store?: Store;
   domain: string;
   environment: string;
-  sameSite?: string;
+  sameSite?:  "none" | "lax" | "strict";
 }): RequestHandler =>
   session({
     name: sessionName,
