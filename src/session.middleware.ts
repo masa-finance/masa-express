@@ -8,6 +8,7 @@ export const MasaSessionMiddleware = ({
   store,
   domain = ".masa.finance",
   environment,
+  sameSite,
 }: {
   sessionName: string;
   secret: string;
@@ -15,6 +16,7 @@ export const MasaSessionMiddleware = ({
   store?: Store;
   domain: string;
   environment: string;
+  sameSite?: string;
 }): RequestHandler =>
   session({
     name: sessionName,
@@ -24,7 +26,11 @@ export const MasaSessionMiddleware = ({
     store,
     cookie: {
       // we need this to be used on multiple domains potentially when we talk about a true SSO
-      sameSite: environment === "production" ? "none" : "lax",
+      sameSite: sameSite
+        ? sameSite
+        : environment === "production"
+        ? "none"
+        : "lax",
       httpOnly: false,
       domain: environment === "production" ? domain : "localhost",
       path: "/",
