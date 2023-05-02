@@ -1,6 +1,6 @@
 {
   "name": "@masa-finance/masa-express",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/src/index.js",
   "typings": "./dist/src/index.d.ts",
   "author": "Sebastian Gerske <13647606+H34D@users.noreply.github.com>",
@@ -19,7 +19,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@masa-finance/masa-sdk": "^1.14.2",
+    "@masa-finance/masa-sdk": "^1.15.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "uuid": "^9.0.0"
