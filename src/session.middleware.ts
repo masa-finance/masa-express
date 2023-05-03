@@ -37,7 +37,7 @@ export const MasaSessionMiddleware = ({
       domain: environment === "production" ? domain : "localhost",
       path: "/",
       // this needs to be set in the lambda config explicitly
-      secure: secure ? secure : environment === "production",
+      secure: secure !== undefined ? secure : environment === "production",
       // max age is in milliseconds
       maxAge: ttl * 1000,
     },
