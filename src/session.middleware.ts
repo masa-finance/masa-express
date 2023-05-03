@@ -9,6 +9,7 @@ export const MasaSessionMiddleware = ({
   domain = ".masa.finance",
   environment,
   sameSite,
+  secure
 }: {
   sessionName: string;
   secret: string;
@@ -16,7 +17,8 @@ export const MasaSessionMiddleware = ({
   store?: Store;
   domain: string;
   environment: string;
-  sameSite?:  "none" | "lax" | "strict";
+  sameSite?: "none" | "lax" | "strict";
+  secure?: boolean;
 }): RequestHandler =>
   session({
     name: sessionName,
@@ -35,7 +37,7 @@ export const MasaSessionMiddleware = ({
       domain: environment === "production" ? domain : "localhost",
       path: "/",
       // this needs to be set in the lambda config explicitly
-      secure: environment === "production",
+      secure: secure ? secure : environment === "production",
       // max age is in milliseconds
       maxAge: ttl * 1000,
     },
