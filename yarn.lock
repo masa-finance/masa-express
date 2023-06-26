@@ -351,10 +351,10 @@
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-sdk@^3.4.11":
-  version "3.4.11"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.4.11.tgz#ff804b14b38c05c4590fe0ed3ecc1a86b8cf1dca"
-  integrity sha512-eKwIjbKGtLm6l7CsGkQz3w3iGjkVz5sIOe8iltoLabncqoVdv0zM2sSSdZoNcCLI3seHyf5iKo36PpZqG2Lv8g==
+"@masa-finance/masa-sdk@^3.4.12":
+  version "3.4.12"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.4.12.tgz#42a7b8854d9c1f7cde680a3ebd45eca3cb8199b9"
+  integrity sha512-7TQgS0+Is+WdYqcOjMkA/SYnh0p8u+/+7ljIIr28pzUBMqSdmEEYXhljQ+m4Z/X5oTPblGwLGLY0wyi6DN5J/g==
   dependencies:
     "@masa-finance/masa-contracts-identity" "^1.8.2"
     "@masa-finance/masa-token" "^2.0.0"
