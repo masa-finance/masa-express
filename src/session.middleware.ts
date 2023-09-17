@@ -1,5 +1,10 @@
-import session, { SessionOptions, Store } from "express-session";
+import session, { SessionOptions, Store, SessionData } from "express-session";
 import { RequestHandler } from "express";
+
+// Extend SessionData to include your custom properties
+interface CustomSessionData extends SessionData {
+  clientAddress?: string;
+}
 
 export const MasaSessionMiddleware = ({
   sessionName,
@@ -44,13 +49,21 @@ export const MasaSessionMiddleware = ({
       secure: secure !== undefined ? secure : environment === "production",
       // max age is in milliseconds
       maxAge: ttl * 1000,
-      clientAddress,
     },
   };
 
-  if (verbose) {
-    console.dir({ sessionArgs }, { depth: null });
-  }
+  const sessionMiddleware = session(sessionArgs);
 
-  return session(sessionArgs);
+  return (req, res, next) => {
+    // First, call the session middleware
+    sessionMiddleware(req, res, () => {
+      // After the session middleware has finished, add clientAddress to the session
+      if (clientAddress) {
+        (req.session as CustomSessionData).clientAddress = clientAddress;
+      }
+
+      // Then, call the next middleware function
+      next();
+    });
+  };
 };
