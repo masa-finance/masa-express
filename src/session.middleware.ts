@@ -11,6 +11,7 @@ export const MasaSessionMiddleware = ({
   sameSite,
   secure,
   verbose = false,
+  clientAddress,
 }: {
   sessionName: string;
   secret: string;
@@ -21,6 +22,7 @@ export const MasaSessionMiddleware = ({
   sameSite?: "none" | "lax" | "strict";
   secure?: boolean;
   verbose?: boolean;
+  clientAddress?: string;
 }): RequestHandler => {
   const sessionArgs: SessionOptions = {
     name: sessionName,
@@ -42,6 +44,7 @@ export const MasaSessionMiddleware = ({
       secure: secure !== undefined ? secure : environment === "production",
       // max age is in milliseconds
       maxAge: ttl * 1000,
+      clientAddress,
     },
   };
 
