@@ -14,8 +14,8 @@
     "start": "yarn build:watch",
     "build": "tsc",
     "build:watch": "tsc -w",
-    "prettier": "prettier ./src ./test --write",
-    "lint": "eslint ./src ./test",
+    "prettier": "prettier ./src --write",
+    "lint": "eslint ./src",
     "doc": "typedoc"
   },
   "dependencies": {
@@ -27,6 +27,9 @@
   "devDependencies": {
     "@types/express-session": "^1.17.9",
     "@types/uuid": "^9.0.6",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
     "prettier": "^3.0.3",
     "typedoc": "^0.25.3",
     "typedoc-plugin-markdown": "^3.16.0",

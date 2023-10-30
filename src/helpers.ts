@@ -5,10 +5,7 @@ export const parseError = (error: any) => {
   return JSON.stringify(error, Object.getOwnPropertyNames(error));
 };
 
-export const gracefullyHandleError = (
-  response: Response,
-  error: Error | unknown,
-): void => {
+export const gracefullyHandleError = (response: Response): void => {
   let status, message;
 
   if (message) {
