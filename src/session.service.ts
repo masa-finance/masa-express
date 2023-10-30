@@ -8,11 +8,11 @@ export const checkSignature =
   async (
     session: Session & Partial<SessionData> & CustomSessionFields,
     signature: string,
-    address: string
+    address: string,
   ): Promise<SessionUser | undefined> => {
     const msg = Templates.loginTemplate(
       session.challenge,
-      session.cookie.expires.toUTCString()
+      session.cookie.expires.toUTCString(),
     );
 
     const recovered = await recoverAddress(msg, signature, false);

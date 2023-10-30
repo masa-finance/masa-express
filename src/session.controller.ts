@@ -5,7 +5,7 @@ import { parseError } from "./helpers";
 export const getChallengeHandler = async (
   request: Express.RequestSession,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const { session } = request;
 
@@ -36,7 +36,7 @@ export const checkSignatureHandler =
   async (
     request: Express.RequestSession,
     response: Response,
-    next: NextFunction
+    next: NextFunction,
   ) => {
     const { session, body } = request;
 
@@ -44,7 +44,7 @@ export const checkSignatureHandler =
       const result = await checkSignature(sessionNamespace)(
         session,
         body.signature,
-        body.address
+        body.address,
       );
 
       if (result) {
@@ -99,7 +99,7 @@ export const logoutHandler =
 export const sessionCheckHandler = (
   request: Express.RequestSession,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const { session } = request;
 
@@ -117,7 +117,7 @@ export const sessionCheckHandler = (
 export const hasSessionChallengeHandler = (
   request: Express.RequestSession,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const { session } = request;
 

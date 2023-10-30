@@ -7,7 +7,7 @@ export const parseError = (error: any) => {
 
 export const gracefullyHandleError = (
   response: Response,
-  error: Error | unknown
+  error: Error | unknown,
 ): void => {
   let status, message;
 

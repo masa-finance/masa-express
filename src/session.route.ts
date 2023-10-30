@@ -26,7 +26,7 @@ export const MasaSessionRouter = ({
 
   router.post(
     "/check-signature",
-    checkSignatureHandler(sessionNamespace) as never
+    checkSignatureHandler(sessionNamespace) as never,
   );
 
   router.use(sessionCheckHandler as never);
