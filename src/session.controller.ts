@@ -124,8 +124,12 @@ export const hasSessionChallengeHandler = (
   console.log("has challenge", session.challenge);
 
   if (!session.challenge) {
-    console.warn(
-      `Session: ${JSON.stringify(session, null, 2)} has no challenge, rejected!`
+    console.info(
+      `Session: ${JSON.stringify(
+        session,
+        null,
+        2,
+      )} has no challenge, rejected!`,
     );
     return response.status(401).send({
       message: "You must have a challenge",
