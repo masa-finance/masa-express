@@ -121,9 +121,9 @@ export const hasSessionChallengeHandler = (
 ) => {
   const { session } = request;
 
-  console.log("has challenge", session.challenge);
-
-  if (!session.challenge) {
+  if (session.challenge) {
+    console.log(`${session.id} has challenge ${session.challenge}`);
+  } else {
     console.info(
       `Session: ${JSON.stringify(
         session,
@@ -131,6 +131,7 @@ export const hasSessionChallengeHandler = (
         2,
       )} has no challenge, rejected!`,
     );
+
     return response.status(401).send({
       message: "You must have a challenge",
     });
