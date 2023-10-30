@@ -19,7 +19,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@masa-finance/masa-sdk": "^3.10.1",
+    "@masa-finance/masa-sdk": "^3.11.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "uuid": "^9.0.1"
@@ -27,7 +27,8 @@
   "devDependencies": {
     "@types/express-session": "^1.17.9",
     "@types/uuid": "^9.0.6",
-    "typedoc": "^0.25.2",
+    "prettier": "^3.0.3",
+    "typedoc": "^0.25.3",
     "typedoc-plugin-markdown": "^3.16.0",
     "typescript": "^5.2.2"
   }
