@@ -1,6 +1,6 @@
 {
   "name": "@masa-finance/masa-express",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "./dist/src/index.js",
   "typings": "./dist/src/index.d.ts",
   "author": "Sebastian Gerske <13647606+H34D@users.noreply.github.com>",
