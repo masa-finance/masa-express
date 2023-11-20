@@ -33,8 +33,8 @@ export const MasaSessionMiddleware = ({
       sameSite: sameSite
         ? sameSite
         : environment === "production"
-        ? "none"
-        : "lax",
+          ? "none"
+          : "lax",
       httpOnly: false,
       domain: environment === "production" ? domain : "localhost",
       path: "/",
