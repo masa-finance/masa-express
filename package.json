@@ -19,7 +19,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@masa-finance/masa-sdk": "^3.14.4",
+    "@masa-finance/masa-sdk": "^3.14.6",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "uuid": "^9.0.1"
@@ -28,7 +28,7 @@
     "@types/express-session": "^1.17.10",
     "@types/uuid": "^9.0.7",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.1",
     "eslint": "^8.56.0",
     "prettier": "^3.1.1",
     "typedoc": "^0.25.7",
