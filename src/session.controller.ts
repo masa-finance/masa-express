@@ -1,6 +1,7 @@
 import { NextFunction, Response } from "express";
 import { checkSignature } from "./session.service";
 import { parseError } from "./helpers";
+import { BaseResult, ISession, SessionUser } from "@masa-finance/masa-sdk";
 
 export const getChallengeHandler = async (
   request: Express.RequestSession,
@@ -35,7 +36,7 @@ export const checkSignatureHandler =
   (sessionNamespace: string) =>
   async (
     request: Express.RequestSession,
-    response: Response,
+    response: Response<SessionUser | BaseResult>,
     next: NextFunction,
   ) => {
     const { session, body } = request;
@@ -51,7 +52,8 @@ export const checkSignatureHandler =
         response.json(result);
       } else {
         response.status(500).json({
-          error: "Failed to check signature!",
+          success: false,
+          message: "Failed to check signature!",
         });
       }
     } catch (error: unknown) {
@@ -98,7 +100,7 @@ export const logoutHandler =
 
 export const sessionCheckHandler = (
   request: Express.RequestSession,
-  response: Response,
+  response: Response<ISession | BaseResult>,
   next: NextFunction,
 ) => {
   const { session } = request;
@@ -107,6 +109,7 @@ export const sessionCheckHandler = (
 
   if (!session.user) {
     return response.status(401).send({
+      success: false,
       message: "You are not authorized, send a new challenge please",
     });
   }
@@ -116,7 +119,7 @@ export const sessionCheckHandler = (
 
 export const hasSessionChallengeHandler = (
   request: Express.RequestSession,
-  response: Response,
+  response: Response<ISession | BaseResult>,
   next: NextFunction,
 ) => {
   const { session } = request;
@@ -133,6 +136,7 @@ export const hasSessionChallengeHandler = (
     );
 
     return response.status(401).send({
+      success: false,
       message: "You must have a challenge",
     });
   }
