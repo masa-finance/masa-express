@@ -19,16 +19,16 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@masa-finance/masa-sdk": "^3.18.1",
+    "@masa-finance/masa-sdk": "^3.18.2",
     "express": "^4.18.2",
     "express-session": "^1.18.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@types/express-session": "^1.17.10",
+    "@types/express-session": "^1.18.0",
     "@types/uuid": "^9.0.8",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "typedoc": "^0.25.9",
