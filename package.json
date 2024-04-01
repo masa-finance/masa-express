@@ -19,7 +19,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@masa-finance/masa-sdk": "^3.24.10",
+    "@masa-finance/masa-sdk": "^3.25.0",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "uuid": "^9.0.1"
