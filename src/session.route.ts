@@ -14,6 +14,7 @@ export const MasaSessionRouter = (
 ): {
   router: Router;
   middleware: RequestHandler;
+  sessionChecker: RequestHandler;
 } => {
   const { verbose, sessionName, sessionNamespace } = args;
 
@@ -42,5 +43,6 @@ export const MasaSessionRouter = (
   return {
     middleware,
     router,
+    sessionChecker: sessionCheckHandler(verbose) as RequestHandler,
   };
 };
