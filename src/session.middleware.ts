@@ -1,5 +1,6 @@
-import session, { SessionOptions, Store } from "express-session";
+import session, { SessionOptions } from "express-session";
 import { RequestHandler } from "express";
+import { MasaSessionArgs } from "./interfaces";
 
 export const MasaSessionMiddleware = ({
   sessionName,
@@ -11,17 +12,7 @@ export const MasaSessionMiddleware = ({
   sameSite,
   secure,
   verbose = false,
-}: {
-  sessionName: string;
-  secret: string;
-  ttl: number;
-  store?: Store;
-  domain: string;
-  environment: string;
-  sameSite?: "none" | "lax" | "strict";
-  secure?: boolean;
-  verbose?: boolean;
-}): RequestHandler => {
+}: MasaSessionArgs): RequestHandler => {
   const sessionArgs: SessionOptions = {
     name: sessionName,
     secret,

@@ -6,19 +6,21 @@ import {
   logoutHandler,
   sessionCheckHandler,
 } from "./session.controller";
+import { MasaSessionMiddleware } from "./session.middleware";
+import { MasaSessionArgs } from "./interfaces";
 
-export const MasaSessionRouter = ({
-  sessionMiddleware,
-  sessionName,
-  sessionNamespace,
-}: {
-  sessionMiddleware: RequestHandler;
-  sessionName: string;
-  sessionNamespace: string;
-}) => {
+export const MasaSessionRouter = (
+  args: MasaSessionArgs,
+): {
+  router: Router;
+  middleware: RequestHandler;
+} => {
+  const { verbose, sessionName, sessionNamespace } = args;
+
+  const middleware: RequestHandler = MasaSessionMiddleware(args);
   const router: Router = express.Router();
 
-  router.use(sessionMiddleware);
+  router.use(middleware);
 
   router.get("/get-challenge", getChallengeHandler as never);
 
@@ -29,7 +31,7 @@ export const MasaSessionRouter = ({
     checkSignatureHandler(sessionNamespace) as never,
   );
 
-  router.use(sessionCheckHandler as never);
+  router.use(sessionCheckHandler(verbose) as never);
 
   router.post("/logout", logoutHandler(sessionName) as never);
 
@@ -37,5 +39,8 @@ export const MasaSessionRouter = ({
     response.send(request.session);
   });
 
-  return router;
+  return {
+    middleware,
+    router,
+  };
 };

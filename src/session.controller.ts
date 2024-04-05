@@ -98,26 +98,28 @@ export const logoutHandler =
     }
   };
 
-export const sessionCheckHandler = (
-  request: Express.RequestSession,
-  response: Response<ISession | BaseResult>,
-  next: NextFunction,
-) => {
-  const { session } = request;
+export const sessionCheckHandler =
+  (verbose?: boolean) =>
+  (
+    request: Express.RequestSession,
+    response: Response<ISession | BaseResult>,
+    next: NextFunction,
+  ) => {
+    const { session } = request;
 
-  if (session.verbose) {
-    console.info("READING COOKIE", session.id, session.cookie);
-  }
+    if (verbose) {
+      console.info("READING COOKIE", session.id, session.cookie);
+    }
 
-  if (!session.user) {
-    return response.status(401).send({
-      success: false,
-      message: "You are not authorized, send a new challenge please",
-    });
-  }
+    if (!session.user) {
+      return response.status(401).send({
+        success: false,
+        message: "You are not authorized, send a new challenge please",
+      });
+    }
 
-  next();
-};
+    next();
+  };
 
 export const hasSessionChallengeHandler = (
   request: Express.RequestSession,
