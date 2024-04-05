@@ -105,7 +105,9 @@ export const sessionCheckHandler = (
 ) => {
   const { session } = request;
 
-  console.log("READING COOKIE", session.id, session.cookie);
+  if (session.verbose) {
+    console.info("READING COOKIE", session.id, session.cookie);
+  }
 
   if (!session.user) {
     return response.status(401).send({
