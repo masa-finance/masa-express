@@ -407,32 +407,32 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.2.tgz#d9fae00a2d5cb40f92cfe64b47ad749fbc38f917"
   integrity sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==
 
-"@layerzerolabs/evm-sdks-core@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/evm-sdks-core/-/evm-sdks-core-2.3.1.tgz#f60a2855427096f7e888fa9567eff7ef33e6ac1e"
-  integrity sha512-STltdGEM0Wt1L5YTzxItboE1pTx5R+pThW+JxVO7gHdkla09WCe6kkY5SqMWhlIsWZ4X40/C+V8lz0Vy7fDT4A==
+"@layerzerolabs/evm-sdks-core@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/evm-sdks-core/-/evm-sdks-core-2.3.3.tgz#72879dd4b188fb6f6343645abc923defcea8c1bf"
+  integrity sha512-KXnPsncQrIyrWxeAvmKxmuE0Ub4y74pPiX9ztHhOhQlhmSrS5P1nauwCKpVyKPQWCuhhs4tBIspVjA4lEIfrlg==
   dependencies:
     ethers "^5.7.2"
 
-"@layerzerolabs/lz-definitions@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-definitions/-/lz-definitions-2.3.1.tgz#1db78f16f2b701a0d76d6d1ac23f919d07e8e004"
-  integrity sha512-vvvQX1hzBnZl2ZphDUKVg/WJ5w4BWFf77AKn2aNFDY4j2v9RrUKNTbYDnR4rJTussi6oQIK/UPdZEziMXVxUvA==
+"@layerzerolabs/lz-definitions@^2.3.2":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-definitions/-/lz-definitions-2.3.3.tgz#835bfe5de19200bd750f4c18ee974a2885160b41"
+  integrity sha512-8U8eLT7jVYA9n9kgiYZmQ9EGSo+Ts8QyTOhdObFvKumHfofkPYXturgfUqWSDMW03vVHiStz4MoNey+gqHK49w==
   dependencies:
     tiny-invariant "^1.3.1"
 
-"@layerzerolabs/lz-evm-sdk-v2@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-evm-sdk-v2/-/lz-evm-sdk-v2-2.3.1.tgz#270ce671ad951a2ef2474171e3d3db4adcca52ea"
-  integrity sha512-YaYJ2dapFbp2stKXdiDA5VwKnyr1ULjZGzRnfNC2h19NYmFxjEkq5p+KzVcewnaIB/Wic1+HwYL7HK32lsRbCA==
+"@layerzerolabs/lz-evm-sdk-v2@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-evm-sdk-v2/-/lz-evm-sdk-v2-2.3.3.tgz#9849fc6af9e8838b1e156c71f0ffe073e8b794ac"
+  integrity sha512-UgqCg6OzHxrPDUCVw8wPbrlYuLJ1OZ+az34xIOZD//40Wk22K7cRf4mlVarLnd50iwdhKwFBhvt6bdnEXz4uAA==
   dependencies:
-    "@layerzerolabs/evm-sdks-core" "^2.3.1"
+    "@layerzerolabs/evm-sdks-core" "^2.3.3"
     ethers "^5.7.2"
 
-"@layerzerolabs/lz-v2-utilities@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-v2-utilities/-/lz-v2-utilities-2.3.1.tgz#ea94f9e857be4591014cfb957b0d850b849733ba"
-  integrity sha512-lgqiF5S/JcWoBsCq+uK50XR/K90G5FKqhtnw7DYj1xUBHmVuwT6WUuws7Me25kc+h3C76DTv0JARLixntIlYFg==
+"@layerzerolabs/lz-v2-utilities@^2.3.2":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-v2-utilities/-/lz-v2-utilities-2.3.3.tgz#cc617a4f880246b44d482341e8209319ceb5fe68"
+  integrity sha512-TeGauEN1bP9VIsmj0qX0hukQNLnYA0J+PVsdaZJ0hK8Zpx5y5moFqZ6xy+aoAVSNitnkrd0+Wzmmqk5bhXKYJA==
   dependencies:
     "@ethersproject/abi" "^5.7.0"
     "@ethersproject/address" "^5.7.0"
@@ -440,7 +440,7 @@
     "@ethersproject/bytes" "^5.7.0"
     "@ethersproject/keccak256" "^5.7.0"
     "@ethersproject/solidity" "^5.7.0"
-    "@layerzerolabs/lz-evm-sdk-v2" "^2.3.1"
+    "@layerzerolabs/lz-evm-sdk-v2" "^2.3.3"
     "@solana/web3.js" "^1.91.4"
     tiny-invariant "^1.3.1"
 
@@ -451,38 +451,38 @@
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-contracts-marketplace@^2.1.25":
-  version "2.1.25"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-marketplace/-/masa-contracts-marketplace-2.1.25.tgz#0549e809198318a2091b57c7be83e6c48bdc32b9"
-  integrity sha512-WKelf6oU6JT/C9sk3m/RxeGjSR7B3y/Qn9VZTytqmovaPsJO36xy/u7EEpN1kCp4Qv2tgIdQV7KgYC+6QDQ4HA==
+"@masa-finance/masa-contracts-marketplace@^2.1.26":
+  version "2.1.26"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-marketplace/-/masa-contracts-marketplace-2.1.26.tgz#6e3919b1a2df8054eae5d416733e638bcddc9167"
+  integrity sha512-pBJRci6mI6fwb5HUY37a5uHs5urgpf6sOyun1S34W4DfcNchvQ/uueRsJfuU/aug8VFgSPprhV3gwvDOC65O9Q==
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-sdk@^3.32.0":
-  version "3.32.0"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.32.0.tgz#99cc634442a5e6f669666c5c65905798626e7c5f"
-  integrity sha512-yYDLv4ZJbC3A84NJq2SmNoWNiu2G9HDXvKj0ydsQaS5marx+uCvtkGJlvOWSfSG6FJYnNCDXpPV2fArwflX97g==
+"@masa-finance/masa-sdk@^3.34.2":
+  version "3.34.2"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.34.2.tgz#ce42cb44070fe3d57f66fa6b8c7d4860e6d7f1de"
+  integrity sha512-JpU4y8k+tZX62iRPhd2qVqjz3qv6MT+w8Qleql7wy3cUtWCuxk9wII5tyuzllk3mE1AAFNdKkWAl9zRBQvCslw==
   dependencies:
     "@ethersproject/abi" "^5.7.0"
     "@ethersproject/abstract-provider" "^5.7.0"
     "@ethersproject/abstract-signer" "^5.7.0"
     "@ethersproject/bignumber" "^5.7.0"
     "@ethersproject/providers" "^5.7.2"
-    "@layerzerolabs/lz-definitions" "^2.3.1"
-    "@layerzerolabs/lz-v2-utilities" "^2.3.1"
+    "@layerzerolabs/lz-definitions" "^2.3.2"
+    "@layerzerolabs/lz-v2-utilities" "^2.3.2"
     "@masa-finance/masa-contracts-identity" "^1.15.0"
-    "@masa-finance/masa-contracts-marketplace" "^2.1.25"
-    "@masa-finance/masa-token" "^2.7.1"
+    "@masa-finance/masa-contracts-marketplace" "^2.1.26"
+    "@masa-finance/masa-token" "^2.9.0"
     arweave "1.11.8"
     axios "^1.6.8"
     ethers "~5.7.2"
     grapheme-splitter "^1.0.4"
     typescript "^5.4.5"
 
-"@masa-finance/masa-token@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-token/-/masa-token-2.7.1.tgz#0ed1835bfbb551add0637baf7ec457b1c1d971fd"
-  integrity sha512-2/ElTvpNqFM+JYxcLx6wRljmWM3Y3wGpq6/BkV7BwT3GEMJlSmLHT6fgTDOyy1h0aBgcnz7ZDnRvGbqgjygLng==
+"@masa-finance/masa-token@^2.9.0":
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-token/-/masa-token-2.9.0.tgz#0d60ab75c725b175110d0ba62b86ac47b0950744"
+  integrity sha512-ELTyOyx7LL0lpM0WCwzVex8cIVI9+uZi59RgQ6zJVfLN2crO/I12ubm7egAv441qn5RXeqD1G7sFm2AG5CVzKg==
 
 "@noble/curves@^1.4.0":
   version "1.4.0"
