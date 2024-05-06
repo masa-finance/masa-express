@@ -458,10 +458,15 @@
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-sdk@^3.34.2":
-  version "3.34.2"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.34.2.tgz#ce42cb44070fe3d57f66fa6b8c7d4860e6d7f1de"
-  integrity sha512-JpU4y8k+tZX62iRPhd2qVqjz3qv6MT+w8Qleql7wy3cUtWCuxk9wII5tyuzllk3mE1AAFNdKkWAl9zRBQvCslw==
+"@masa-finance/masa-contracts-staking@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-staking/-/masa-contracts-staking-0.1.6.tgz#1a788d264976997fe1212f8de700eca7cbecb64c"
+  integrity sha512-2Ll64MvvDAOIWtV3rx/ws0YTgBk1JNd9iRiPgieybhi8OYgaooDTewrzuZ/QMsbh3NA9dXMX51ycl3TT0xk3Ig==
+
+"@masa-finance/masa-sdk@^3.36.1":
+  version "3.36.1"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.36.1.tgz#1b88f61141fb74d8454b1bd3ef73aff83f117884"
+  integrity sha512-SLeKzpf62z7Sej6cu5R4eHnRu3je6TkxdQBQuXZ2um/gVZCNDe0K4ajfhKwspnlf9y/+d84Tc9MVVBk8uKPH0Q==
   dependencies:
     "@ethersproject/abi" "^5.7.0"
     "@ethersproject/abstract-provider" "^5.7.0"
@@ -472,17 +477,18 @@
     "@layerzerolabs/lz-v2-utilities" "^2.3.2"
     "@masa-finance/masa-contracts-identity" "^1.15.0"
     "@masa-finance/masa-contracts-marketplace" "^2.1.26"
-    "@masa-finance/masa-token" "^2.9.0"
+    "@masa-finance/masa-contracts-staking" "^0.1.6"
+    "@masa-finance/masa-token" "^2.9.2"
     arweave "1.11.8"
     axios "^1.6.8"
     ethers "~5.7.2"
     grapheme-splitter "^1.0.4"
     typescript "^5.4.5"
 
-"@masa-finance/masa-token@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-token/-/masa-token-2.9.0.tgz#0d60ab75c725b175110d0ba62b86ac47b0950744"
-  integrity sha512-ELTyOyx7LL0lpM0WCwzVex8cIVI9+uZi59RgQ6zJVfLN2crO/I12ubm7egAv441qn5RXeqD1G7sFm2AG5CVzKg==
+"@masa-finance/masa-token@^2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-token/-/masa-token-2.9.2.tgz#bb727762e1329e6cffd8834794cb61a6f373b189"
+  integrity sha512-JdvBuHgHjgsMWc2QJs6Qqit2axY1X3L38nJoxbF5tRijPMJlgWMxLLtUdw6HUZDktB12EcpPGhA4QW4x/IJRHg==
 
 "@noble/curves@^1.4.0":
   version "1.4.0"
