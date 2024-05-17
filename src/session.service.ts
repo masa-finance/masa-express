@@ -9,7 +9,7 @@ const recoverSessionUser = (
   signature: string,
   address: string,
 ): SessionUser | undefined => {
-  let sessionUser: SessionUser | undefined = undefined;
+  let sessionUser: SessionUser | undefined;
 
   const recovered = recoverAddress(msg, signature, false);
 
