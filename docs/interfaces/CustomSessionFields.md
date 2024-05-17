@@ -1,36 +1,29 @@
-[# Masa Express
- - v2.0.1](../README.md) / [Exports](../modules.md) / CustomSessionFields
+[**# Masa Express v2.0.2**](../README.md) • **Docs**
+
+***
+
+[# Masa Express v2.0.2](../globals.md) / CustomSessionFields
 
 # Interface: CustomSessionFields
-
-## Table of contents
-
-### Properties
-
-- [challenge](CustomSessionFields.md#challenge)
-- [cookie](CustomSessionFields.md#cookie)
-- [user](CustomSessionFields.md#user)
 
 ## Properties
 
 ### challenge
 
-• **challenge**: `string`
+> **challenge**: `string`
 
-___
+***
 
 ### cookie
 
-• **cookie**: `Object`
+> **cookie**: `object`
 
-#### Type declaration
+#### expires
 
-| Name | Type |
-| :------ | :------ |
-| `expires` | `string` |
+> **expires**: `string`
 
-___
+***
 
 ### user
 
-• **user**: `SessionUser`
+> **user**: `SessionUser`

@@ -1,5 +1,6 @@
-# Masa Express
- / [Exports](modules.md)
+**# Masa Express v2.0.2** • [**Docs**](globals.md)
+
+***
 
 <!-- TOC -->
   * [Installation](#installation)
