@@ -9,27 +9,29 @@ const recoverSessionUser = (
   signature: string,
   address: string,
 ): SessionUser | undefined => {
+  let sessionUser: SessionUser | undefined = undefined;
+
   const recovered = recoverAddress(msg, signature, false);
 
   if (recovered?.toLowerCase() === address?.toLowerCase()) {
-    const sessionUser: SessionUser = {
+    sessionUser = {
       userId: uuidv5(address, sessionNamespace),
       address,
     };
-
-    return sessionUser;
   } else {
     console.error("Recovery address mismatch", recovered, address);
   }
+
+  return sessionUser;
 };
 
 export const checkSignature =
   (sessionNamespace: string) =>
-  async (
+  (
     session: Session & Partial<SessionData> & CustomSessionFields,
     signature: string,
     address: string,
-  ): Promise<SessionUser | undefined> => {
+  ): SessionUser | undefined => {
     let msg = Templates.loginTemplate(
       session.challenge,
       session.cookie.expires.toUTCString(),
@@ -60,8 +62,6 @@ export const checkSignature =
 
     if (sessionUser) {
       session.user = sessionUser;
-
-      console.log("Login successful!");
 
       return sessionUser;
     }
