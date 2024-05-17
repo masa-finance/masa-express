@@ -1,8 +1,8 @@
-[**# Masa Express v2.1.0-alpha.1**](../README.md) • **Docs**
+[**# Masa Express v2.1.0-alpha.2**](../README.md) • **Docs**
 
 ***
 
-[# Masa Express v2.1.0-alpha.1](../globals.md) / MasaSessionArgs
+[# Masa Express v2.1.0-alpha.2](../globals.md) / MasaSessionArgs
 
 # Interface: MasaSessionArgs
 
