@@ -62,7 +62,7 @@ export const checkSignature =
 
     if (sessionUser) {
       session.user = sessionUser;
-
-      return sessionUser;
     }
+
+    return sessionUser;
   };
