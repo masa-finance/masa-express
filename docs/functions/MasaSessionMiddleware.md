@@ -1,8 +1,8 @@
-[**# Masa Express v2.1.0-alpha.0**](../README.md) • **Docs**
+[**# Masa Express v2.1.0-alpha.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa Express v2.1.0-alpha.0](../globals.md) / MasaSessionMiddleware
+[# Masa Express v2.1.0-alpha.1](../globals.md) / MasaSessionMiddleware
 
 # Function: MasaSessionMiddleware()
 
