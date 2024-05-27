@@ -1,79 +1,67 @@
-[# Masa Express
- - v2.0.1](../README.md) / [Exports](../modules.md) / MasaSessionArgs
+[**# Masa Express v2.1.0**](../README.md) • **Docs**
+
+***
+
+[# Masa Express v2.1.0](../globals.md) / MasaSessionArgs
 
 # Interface: MasaSessionArgs
-
-## Table of contents
-
-### Properties
-
-- [domain](MasaSessionArgs.md#domain)
-- [environment](MasaSessionArgs.md#environment)
-- [sameSite](MasaSessionArgs.md#samesite)
-- [secret](MasaSessionArgs.md#secret)
-- [secure](MasaSessionArgs.md#secure)
-- [sessionName](MasaSessionArgs.md#sessionname)
-- [sessionNamespace](MasaSessionArgs.md#sessionnamespace)
-- [store](MasaSessionArgs.md#store)
-- [ttl](MasaSessionArgs.md#ttl)
-- [verbose](MasaSessionArgs.md#verbose)
 
 ## Properties
 
 ### domain
 
-• **domain**: `string`
+> **domain**: `string`
 
-___
+***
 
 ### environment
 
-• **environment**: `string`
+> **environment**: `string`
 
-___
+***
 
-### sameSite
+### sameSite?
 
-• `Optional` **sameSite**: ``"none"`` \| ``"lax"`` \| ``"strict"``
+> `optional` **sameSite**: `"none"` \| `"lax"` \| `"strict"`
 
-___
+***
 
 ### secret
 
-• **secret**: `string`
+> **secret**: `string`
 
-___
+***
 
-### secure
+### secure?
 
-• `Optional` **secure**: `boolean`
+> `optional` **secure**: `boolean`
 
-___
+***
 
 ### sessionName
 
-• **sessionName**: `string`
+> **sessionName**: `string`
 
-___
+***
 
 ### sessionNamespace
 
-• **sessionNamespace**: `string`
+> **sessionNamespace**: `string`
 
-___
+***
 
-### store
+### store?
 
-• `Optional` **store**: `Store`
+> `optional` **store**: `Store`
 
-___
+***
 
 ### ttl
 
-• **ttl**: `number`
+> **ttl**: `number`
 
-___
+***
 
-### verbose
+### verbose?
 
-• `Optional` **verbose**: `boolean`
+> `optional` **verbose**: `boolean`

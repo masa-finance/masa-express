@@ -34,15 +34,15 @@ export const getChallengeHandler = async (
 
 export const checkSignatureHandler =
   (sessionNamespace: string) =>
-  async (
+  (
     request: Express.RequestSession,
     response: Response<SessionUser | BaseResult>,
     next: NextFunction,
-  ) => {
+  ): void => {
     const { session, body } = request;
 
     try {
-      const result = await checkSignature(sessionNamespace)(
+      const result = checkSignature(sessionNamespace)(
         session,
         body.signature,
         body.address,

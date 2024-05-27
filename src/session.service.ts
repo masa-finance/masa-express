@@ -3,30 +3,66 @@ import { v5 as uuidv5 } from "uuid";
 import { recoverAddress, SessionUser, Templates } from "@masa-finance/masa-sdk";
 import { Session, SessionData } from "express-session";
 
+const recoverSessionUser = (
+  sessionNamespace: string,
+  msg: string,
+  signature: string,
+  address: string,
+): SessionUser | undefined => {
+  let sessionUser: SessionUser | undefined;
+
+  const recovered = recoverAddress(msg, signature, false);
+
+  if (recovered?.toLowerCase() === address?.toLowerCase()) {
+    sessionUser = {
+      userId: uuidv5(address, sessionNamespace),
+      address,
+    };
+  } else {
+    console.error("Recovery address mismatch", recovered, address);
+  }
+
+  return sessionUser;
+};
+
 export const checkSignature =
   (sessionNamespace: string) =>
-  async (
+  (
     session: Session & Partial<SessionData> & CustomSessionFields,
     signature: string,
     address: string,
-  ): Promise<SessionUser | undefined> => {
-    const msg = Templates.loginTemplate(
+  ): SessionUser | undefined => {
+    let msg = Templates.loginTemplate(
       session.challenge,
       session.cookie.expires.toUTCString(),
     );
 
-    const recovered = await recoverAddress(msg, signature, false);
+    let sessionUser = recoverSessionUser(
+      sessionNamespace,
+      msg,
+      signature,
+      address,
+    );
 
-    if (recovered?.toLowerCase() === address?.toLowerCase()) {
-      const sessionUser: SessionUser = {
-        userId: uuidv5(address, sessionNamespace),
+    if (!sessionUser) {
+      console.warn("First pass login failed! Retrying next template!");
+
+      msg = Templates.loginTemplateNext(
+        session.challenge,
+        session.cookie.expires.toUTCString(),
+      );
+
+      sessionUser = recoverSessionUser(
+        sessionNamespace,
+        msg,
+        signature,
         address,
-      };
-
-      session.user = sessionUser;
-
-      return sessionUser;
-    } else {
-      console.error("Recovery address mismatch", recovered, address);
+      );
     }
+
+    if (sessionUser) {
+      session.user = sessionUser;
+    }
+
+    return sessionUser;
   };
