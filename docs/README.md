@@ -1,4 +1,4 @@
-**# Masa Express v2.1.0-alpha.2** • [**Docs**](globals.md)
+**# Masa Express v2.1.0** • [**Docs**](globals.md)
 
 ***
 
