@@ -395,17 +395,17 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz#4a2868d75d6d6963e423bcf90b7fd1be343409d3"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
 
-"@layerzerolabs/lz-definitions@^2.3.25":
-  version "2.3.25"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-definitions/-/lz-definitions-2.3.25.tgz#4de6351031200e29c89b67885a76aec0493c2e74"
-  integrity sha512-7/F1MvcLpbxFmXu9GN+Aox2X+CH+95GCgg88bbEf34ZxrtDFY00Ye9sJ652QHuSYfdECQ5o5jSVq8pFmVfwtXw==
+"@layerzerolabs/lz-definitions@^2.3.32":
+  version "2.3.38"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-definitions/-/lz-definitions-2.3.38.tgz#b770210b00e3c72afb39ce67f28eb9b61fe3bf50"
+  integrity sha512-aNt+/qb+AI9tIfCxh8JuehhUakG3e6HsJuEaB/GzJakbCI9LmKucge1klDPse1fPoaWJ/akE+t+6fEleoMJvjw==
   dependencies:
     tiny-invariant "^1.3.1"
 
-"@layerzerolabs/lz-v2-utilities@^2.3.25":
-  version "2.3.25"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-v2-utilities/-/lz-v2-utilities-2.3.25.tgz#c16b90273e4ae52bef3d1cb4c2567eac821a9708"
-  integrity sha512-IzqcK49NPBOEs/Q7d6+fJEpIfjicR4huaeayyK7oAVCQ5X/dfM9zT8qTbpbQ9ju52OmJKCyifOJglK2xXg4zZg==
+"@layerzerolabs/lz-v2-utilities@^2.3.32":
+  version "2.3.38"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-v2-utilities/-/lz-v2-utilities-2.3.38.tgz#a6b399098e04577f28958b8b859b07a227c4eb6f"
+  integrity sha512-azpVYt930XsCybuMVY5SFSWCgcOLkU5Trnvi/4L5w0AsTpCWJ7NsxKbI3diSdKSepaHQDgQ1khv135KXarukYw==
   dependencies:
     "@ethersproject/abi" "^5.7.0"
     "@ethersproject/address" "^5.7.0"
@@ -435,18 +435,18 @@
   resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-staking/-/masa-contracts-staking-0.4.0.tgz#9b361ed16a8961a15c7342e72ed517d92a49048c"
   integrity sha512-qvx29IIRdTLrSFBbe/XkrKn65cgETHZ1BcgXe64EzUCrOCDF6fkP8NOf/3Y9thbidIaUd8KXRh8eWZVVadTP6A==
 
-"@masa-finance/masa-sdk@~3.41.2":
-  version "3.41.2"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.41.2.tgz#beb63122c9f77f145f74620c331c08677c57c537"
-  integrity sha512-7l7zhlfdnNVK6m51MDTcuhP1JDS4Q3mc2iGGJGfGjQft28/2pWthKIJ/5cUJo+0Bv72QQy4+5iS3ydPr/DAjnw==
+"@masa-finance/masa-sdk@~4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-4.2.0.tgz#4a946c1b26df7a76e6a21919028f1729a0445d1a"
+  integrity sha512-SGCBAkc8pHi8Bb/048/0VcL7f6BBgPDJm7/SCBQxHzfIys/qWrTvLcoPK2RilBf0Nn3mMorRerNCf7tyWQ/lhQ==
   dependencies:
     "@ethersproject/abi" "^5.7.0"
     "@ethersproject/abstract-provider" "^5.7.0"
     "@ethersproject/abstract-signer" "^5.7.0"
     "@ethersproject/bignumber" "^5.7.0"
     "@ethersproject/providers" "^5.7.2"
-    "@layerzerolabs/lz-definitions" "^2.3.25"
-    "@layerzerolabs/lz-v2-utilities" "^2.3.25"
+    "@layerzerolabs/lz-definitions" "^2.3.32"
+    "@layerzerolabs/lz-v2-utilities" "^2.3.32"
     "@masa-finance/masa-contracts-identity" "^1.15.0"
     "@masa-finance/masa-contracts-marketplace" "^2.1.26"
     "@masa-finance/masa-contracts-staking" "^0.4.0"
@@ -455,7 +455,7 @@
     axios "^1.6.8"
     ethers "~5.7.2"
     grapheme-splitter "^1.0.4"
-    typescript "^5.4.5"
+    typescript "^5.5.4"
 
 "@masa-finance/masa-token@^2.10.0":
   version "2.10.0"
@@ -2165,7 +2165,7 @@ typedoc@^0.26.6:
     shiki "^1.9.1"
     yaml "^2.4.5"
 
-typescript@^5.4.5, typescript@^5.5.4:
+typescript@^5.5.4:
   version "5.5.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.4.tgz#d9852d6c82bad2d2eda4fd74a5762a8f5909e9ba"
   integrity sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==
