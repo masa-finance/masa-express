@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@masa-finance/masa-sdk": "~3.41.2",
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "express-session": "^1.18.0",
     "uuid": "^10.0.0"
   },
