@@ -395,17 +395,17 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz#4a2868d75d6d6963e423bcf90b7fd1be343409d3"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
 
-"@layerzerolabs/lz-definitions@^2.3.25":
-  version "2.3.25"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-definitions/-/lz-definitions-2.3.25.tgz#4de6351031200e29c89b67885a76aec0493c2e74"
-  integrity sha512-7/F1MvcLpbxFmXu9GN+Aox2X+CH+95GCgg88bbEf34ZxrtDFY00Ye9sJ652QHuSYfdECQ5o5jSVq8pFmVfwtXw==
+"@layerzerolabs/lz-definitions@^2.3.37":
+  version "2.3.44"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-definitions/-/lz-definitions-2.3.44.tgz#7500995b86a1022e7f57d76e75fff4a16c19327d"
+  integrity sha512-8dH7rbHCVG+GDOizCb4RrtHEFHr5wud9Lf9Kxs/MLThgu7VWcXvy78KYHMQ4S7AXoFnyzMPaiEU/LS8kRWfhag==
   dependencies:
     tiny-invariant "^1.3.1"
 
-"@layerzerolabs/lz-v2-utilities@^2.3.25":
-  version "2.3.25"
-  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-v2-utilities/-/lz-v2-utilities-2.3.25.tgz#c16b90273e4ae52bef3d1cb4c2567eac821a9708"
-  integrity sha512-IzqcK49NPBOEs/Q7d6+fJEpIfjicR4huaeayyK7oAVCQ5X/dfM9zT8qTbpbQ9ju52OmJKCyifOJglK2xXg4zZg==
+"@layerzerolabs/lz-v2-utilities@^2.3.37":
+  version "2.3.44"
+  resolved "https://registry.yarnpkg.com/@layerzerolabs/lz-v2-utilities/-/lz-v2-utilities-2.3.44.tgz#d1937c68060147e3856ea7368cba72c7cff88ad8"
+  integrity sha512-0p7tdJCf6BSmN38tAnO7WyOoC84NDTCQt1MqPBomXTyIux1RLpkS82jcxv92+E+1LNulhHIx5W62gaKKx27B2A==
   dependencies:
     "@ethersproject/abi" "^5.7.0"
     "@ethersproject/address" "^5.7.0"
@@ -430,32 +430,32 @@
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-contracts-staking@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-staking/-/masa-contracts-staking-0.4.0.tgz#9b361ed16a8961a15c7342e72ed517d92a49048c"
-  integrity sha512-qvx29IIRdTLrSFBbe/XkrKn65cgETHZ1BcgXe64EzUCrOCDF6fkP8NOf/3Y9thbidIaUd8KXRh8eWZVVadTP6A==
+"@masa-finance/masa-contracts-staking@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-staking/-/masa-contracts-staking-0.5.2.tgz#24b4e32756fea3e9abd0edb1913f7f4f988bcb36"
+  integrity sha512-CaYtFLStLjhHClaFjRIDKKxqJOAJZlET/iFixqIxvDXW0l0lJ5v1vIkJyfiYUj0UhSN2AnEDMzoftsWXQbtq4g==
 
-"@masa-finance/masa-sdk@~3.41.2":
-  version "3.41.2"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.41.2.tgz#beb63122c9f77f145f74620c331c08677c57c537"
-  integrity sha512-7l7zhlfdnNVK6m51MDTcuhP1JDS4Q3mc2iGGJGfGjQft28/2pWthKIJ/5cUJo+0Bv72QQy4+5iS3ydPr/DAjnw==
+"@masa-finance/masa-sdk@~4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-4.7.0.tgz#0e3d5334173feb581a7a366c1b1467c86fe690ff"
+  integrity sha512-m6ib3rhPxoPguhcpRf4dMLiUgelDsqs93OAV2wP1QOvSNpZj7yN4b7ZsB1q15mp5ZbOBlzWlooqEEKKsIQXzYg==
   dependencies:
     "@ethersproject/abi" "^5.7.0"
     "@ethersproject/abstract-provider" "^5.7.0"
     "@ethersproject/abstract-signer" "^5.7.0"
     "@ethersproject/bignumber" "^5.7.0"
     "@ethersproject/providers" "^5.7.2"
-    "@layerzerolabs/lz-definitions" "^2.3.25"
-    "@layerzerolabs/lz-v2-utilities" "^2.3.25"
+    "@layerzerolabs/lz-definitions" "^2.3.37"
+    "@layerzerolabs/lz-v2-utilities" "^2.3.37"
     "@masa-finance/masa-contracts-identity" "^1.15.0"
     "@masa-finance/masa-contracts-marketplace" "^2.1.26"
-    "@masa-finance/masa-contracts-staking" "^0.4.0"
+    "@masa-finance/masa-contracts-staking" "^0.5.2"
     "@masa-finance/masa-token" "^2.10.0"
     arweave "1.11.8"
-    axios "^1.6.8"
+    axios "^1.7.4"
     ethers "~5.7.2"
     grapheme-splitter "^1.0.4"
-    typescript "^5.4.5"
+    typescript "^5.5.4"
 
 "@masa-finance/masa-token@^2.10.0":
   version "2.10.0"
@@ -784,10 +784,10 @@ axios@^0.27.2:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
 
-axios@^1.6.8:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.2.tgz#b625db8a7051fbea61c35a3cbb3a1daa7b9c7621"
-  integrity sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==
+axios@^1.7.4:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
+  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -2165,7 +2165,7 @@ typedoc@^0.26.6:
     shiki "^1.9.1"
     yaml "^2.4.5"
 
-typescript@^5.4.5, typescript@^5.5.4:
+typescript@^5.5.4:
   version "5.5.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.4.tgz#d9852d6c82bad2d2eda4fd74a5762a8f5909e9ba"
   integrity sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==
